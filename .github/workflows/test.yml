@@ -1,4 +1,4 @@
-name: Testy jednostkowe
+name: Testy backendu
 
 on:
   push:
@@ -7,8 +7,11 @@ on:
     branches: [master]
 
 jobs:
-  test:
+  backend-tests:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
 
     steps:
       - name: Checkout repo
