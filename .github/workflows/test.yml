@@ -1,5 +1,14 @@
 name: Testy backendu
 
+env:
+  DB_HOST: localhost
+  DB_PORT: 5432
+  DB_USER: postgres
+  DB_PASSWORD: 1234
+  DB_NAME: todo_test
+  NODE_ENV: test
+
+
 on:
   push:
     branches: [master]
@@ -15,7 +24,7 @@ jobs:
         image: postgres:15
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: '1234'
+          POSTGRES_PASSWORD: 1234
           POSTGRES_DB: todo_test_app
         ports:
           - 5432:5432
