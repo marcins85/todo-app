@@ -16,7 +16,9 @@ describe('TodoController (e2e)', () => {
     });
 
     afterAll(async () => {
-        await app.close();
+        if (app) {
+            await app.close();
+        }
         // await repository.clear();
     });
 
