@@ -24,9 +24,9 @@ export default function TodoForm ({onAddTodo}: Props) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Wpisz zadanie"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button type="submit"className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            <button type="submit"className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition"
             >
                 Dodaj
             </button>

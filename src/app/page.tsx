@@ -49,9 +49,12 @@ export default function Home() {
     }
 
     return (
-        <main className="max-w-xl mx-auto p-6 space-y-6">
-            <h1 className="text-3xl font-bold text-center text-gray-800">Lista zadań</h1>
-            <button onClick={() => document.documentElement.classList.toggle('dark')}>
+        <main className="max-w-xl mx-auto p-6 space-y-6 bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
+            <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white">Lista zadań</h1>
+            <button 
+                onClick={() => document.documentElement.classList.toggle('dark')}
+                className="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            >
                 Przełącz motyw
             </button>
 
