@@ -33,7 +33,7 @@ describe('TodoController (e2e)', () => {
     it('/todos (POST) powinno dodać zadanie', async () => {
         const res = await request(app.getHttpServer())
             .post('/todos')
-            .send({ title: 'Testowe zadanie' });
+            .send({ text: 'Testowe zadanie' });
 
         expect(res.status).toBe(201);
         expect(res.body).toHaveProperty('id');
