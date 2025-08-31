@@ -11,7 +11,7 @@ import { TodosModule } from './todos/todos.module';
       port: 5432,
       username: 'postgres',
       password: '1234',
-      database: 'todo_app',
+      database: process.env.NODE_ENV === 'test' ? 'todo_test_app' : 'todo_app',
       entities: [Todo],
       synchronize: true, // tylko w dev!
     }),
